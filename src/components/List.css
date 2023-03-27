@@ -1,0 +1,71 @@
+.List {
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(130, 125, 125, 0.153) 0px 15px 25px;
+    width: 100vw;
+    padding: 20px 20px 40px;
+    font-size: medium;
+    text-align: center;
+    border-radius: 24px;
+    display: block;
+}
+
+.filters {
+    display: flex;
+    margin-left: 150px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.dateFilter {
+    margin-right: 18px;
+}
+.phaseFilter {
+    margin-right: 10px;
+}
+
+.btn {
+    background-color: rgb(72, 61, 139);
+    color: rgb(255, 255, 255);
+    font-family: Avenir;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+    margin-left: 10px;
+    text-align: center;
+    border-spacing: 10px;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+td {
+    width: 1000px;
+    display: table-cell;
+    vertical-align: inherit;
+}

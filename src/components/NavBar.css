@@ -1,0 +1,20 @@
+.Menu-item {
+    align-items: flex-start;
+    color: #181818;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    list-style: none;
+    margin: 0px;
+    padding: 0px 0px 35px;
+}
+
+a {
+    align-items: center;
+    color: #181818;
+    display: flex;
+    position: relative;
+    flex: 0 1 auto;
+    margin: 0px;
+    text-decoration: none;
+}
