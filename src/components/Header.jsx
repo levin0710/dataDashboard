@@ -7,7 +7,6 @@ const Header = () => {
   
     return (
     <div className="Header">
-        <img className="Logo" alt="cresent moon logo" src="https://img.icons8.com/fluency/344/full-moon.png"/>
         <h3 className="Header-title">SeatGeek Events</h3>
     </div>
       );

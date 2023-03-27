@@ -3,7 +3,7 @@ const API_KEY = import.meta.env.VITE_APP_API_KEY;
 import './List.css'
 
 
-const List = () => {
+const List = ({list, setList} ) => {
   const stateAbbreviations = [
     'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
     'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
@@ -12,7 +12,6 @@ const List = () => {
     'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'
   ];
   
-  const [list, setList] = useState(null);
   const [filteredResults, setFilteredResults] = useState(null);
   const [searchInput, setSearchInput] = useState("");
   const [selectedState, setSelectedState] = useState('');
@@ -64,11 +63,12 @@ const List = () => {
   useEffect(() => {
     const fetchAllEventData = async () => {
       const response = await fetch( 
-        `https://api.seatgeek.com/2/events?taxonomies.name=sports&taxonomies.name=concert&client_id=${API_KEY}`
+        `https://api.seatgeek.com/2/events?taxonomies.name=sports&taxonomies.name=concert&per_page=50&client_id=${API_KEY}`
       );
       
       const json = await response.json();
       setList(json);
+      
     };
     fetchAllEventData().catch(console.error);
   
@@ -78,8 +78,9 @@ const List = () => {
     return (
         <div className="List">
           <div className="filters">
-            <div className="dateFilter">
+            <div className="search-bar">
               <input type="text"
+              className="search-bar__input"
                     placeholder="Search by title..."
                     onChange={(inputString) => searchItems(inputString.target.value)}/>
             </div>
