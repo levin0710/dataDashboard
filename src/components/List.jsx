@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 import './List.css'
+import { Link } from "react-router-dom";
 
 
 const List = ({list, setList} ) => {
@@ -63,7 +64,7 @@ const List = ({list, setList} ) => {
   useEffect(() => {
     const fetchAllEventData = async () => {
       const response = await fetch( 
-        `https://api.seatgeek.com/2/events?taxonomies.name=sports&taxonomies.name=concert&per_page=50&client_id=${API_KEY}`
+        `https://api.seatgeek.com/2/events?sort=score.desc&taxonomies.name=sports&taxonomies.name=concert&per_page=50&client_id=${API_KEY}`
       );
       
       const json = await response.json();
@@ -115,7 +116,6 @@ const List = ({list, setList} ) => {
                   <th>Type</th>
                   <th>Title</th>
                   <th>Location</th>
-                  <th>Link</th>
                 </tr>
               </thead>
               <tbody>
@@ -126,7 +126,12 @@ const List = ({list, setList} ) => {
                   <td>{event.type}</td>
                   <td>{event.short_title}</td>
                   <td>{event.venue.display_location}</td>
-                  <td><a href={event.url}>Link</a></td>
+                  <td><Link
+                          to={`/event/${event.id}`}
+                          key={event.id}
+                        >
+                      🔗 <span className="tab"></span>
+                  </Link></td>
                 </tr>
             )
           : list && list.events.map((event) =>  
@@ -136,7 +141,12 @@ const List = ({list, setList} ) => {
                   <td>{event.type}</td>
                   <td>{event.short_title}</td>
                   <td>{event.venue.display_location}</td>
-                  <td><a href={event.url}>Link</a></td>
+                  <td ><Link
+                          to={`/event/${event.id}`}
+                          key={event.id}
+                        >
+                      🔗 <span className="tab"></span>
+                  </Link></td>
                 </tr>
           
             )}

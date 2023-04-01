@@ -4,6 +4,8 @@ import Card from './components/Card.jsx';
 import Header from './components/Header.jsx';
 import List from './components/List.jsx';
 import NavBar from './components/NavBar.jsx';
+import { useRoutes } from "react-router-dom";
+
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
@@ -18,7 +20,7 @@ function App() {
   useEffect(() => {
     const fetchAllEventData = async () => {
       const response = await fetch( 
-        `https://api.seatgeek.com/2/events?taxonomies.name=sports&taxonomies.name=concert&per_page=50&client_id=${API_KEY}`
+        `https://api.seatgeek.com/2/events?sort=score.desc&taxonomies.name=sports&taxonomies.name=concert&per_page=50&client_id=${API_KEY}`
       );
       const json = await response.json();
       
@@ -76,10 +78,6 @@ function App() {
 
   return (
     <div className="whole-page">
-      <div className='App-sidebar'>
-        <Header></Header>
-        <NavBar></NavBar>
-      </div>
       <div className='App-page'>
         <div className='App-row'>
           <Card title={"Most Popular State"} value={state}></Card>

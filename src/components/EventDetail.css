@@ -1,0 +1,40 @@
+.details {
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(130, 125, 125, 0.153) 0px 15px 25px;
+    padding: 20px 20px 40px;
+    font-size: medium;
+    text-align: center;
+    border-radius: 24px;
+    display: block;
+    padding: 20px 20px 40px;
+    text-align: left;
+    width: 800px;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ea2d2f;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  a:hover {
+    background-color: #f67c7e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    transform: translateY(-2px);
+  }
+  
