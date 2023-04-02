@@ -5,6 +5,7 @@ import Header from './components/Header.jsx';
 import List from './components/List.jsx';
 import NavBar from './components/NavBar.jsx';
 import { useRoutes } from "react-router-dom";
+import StatsChart from './components/StatsChart';
 
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
@@ -20,7 +21,7 @@ function App() {
   useEffect(() => {
     const fetchAllEventData = async () => {
       const response = await fetch( 
-        `https://api.seatgeek.com/2/events?sort=score.desc&taxonomies.name=sports&taxonomies.name=concert&per_page=50&client_id=${API_KEY}`
+        `https://api.seatgeek.com/2/events?sort=score.desc&taxonomies.name=sports&taxonomies.name=concert&per_page=250&client_id=${API_KEY}`
       );
       const json = await response.json();
       
@@ -66,6 +67,7 @@ function App() {
   
       // Set state
       setList(json);
+      console.log(json)
       setMostPopularState(mostPopularState);
       setMostPopularType(mostPopularType);
       setTotalCount(counts.total);
@@ -74,7 +76,7 @@ function App() {
     fetchAllEventData().catch(console.error);
   }, []);
   
-
+  
 
   return (
     <div className="whole-page">
@@ -85,8 +87,12 @@ function App() {
           <Card title={"Most Popular Type"} value={type}></Card>
         </div>
         <div className='App-row'>
+          <StatsChart/>  
+        </div>    
+        <div className='App-row'>
           <List list={list}
           setList={setList}></List>
+          
         </div>
       </div>
       
