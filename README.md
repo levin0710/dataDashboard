@@ -1,8 +1,8 @@
-# Web Development Project 5 - *DataDashboard*
+# Web Development Project 6 - *dataDashboard*
 
 Submitted by: **Levin Sanchez**
 
-This web app: **Seat Geek event Dashboard**
+This web app: **Data Dashboard using seatgeek API**
 
 Time spent: **8** hours spent in total
 
@@ -10,18 +10,15 @@ Time spent: **8** hours spent in total
 
 The following **required** functionality is completed:
 
-- [x] **The list displays a list of data fetched using an API call**
-- [x] **Data uses the useEffect React hook and async/await syntax**
-- [x] **The app dashboard includes at least three summary statistics about the data such as**
-  - [x] *insert details*
-- [x] **A search bar allows the user to search for an item in the fetched data**
-- [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [x] **The app includes at least two unique chart developed using the fetched data that tell an interesting story**
+- [x] **Clicking on an item in the list view displays more details about it**
+- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
+
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
-- [ ] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [ ] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
@@ -29,15 +26,15 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
-
-<a href="https://www.loom.com/share/8362e1eff75a40faa44b7cdb28b5da43">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8362e1eff75a40faa44b7cdb28b5da43-with-play.gif">
- </a>
-
+<a href="https://www.loom.com/share/8157645bf6244dc5a4b79b006813c7eb">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8157645bf6244dc5a4b79b006813c7eb-with-play.gif">
+  </a>
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with LOOM  
-
+GIF created with Loom  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
