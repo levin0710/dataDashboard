@@ -26,8 +26,8 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-<a href="https://www.loom.com/share/8157645bf6244dc5a4b79b006813c7eb">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8157645bf6244dc5a4b79b006813c7eb-with-play.gif">
+<a href="https://www.loom.com/share/203b108d308849fa9fc069e2fdb21877">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/203b108d308849fa9fc069e2fdb21877-with-play.gif">
   </a>
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Loom  
